@@ -299,7 +299,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	}, null, context.subscriptions);
 
-	vscode.workspace.onWillSaveTextDocument((document: vscode.TextDocument) => {
+	vscode.workspace.onWillSaveTextDocument(() => {
 		uploadBlock(context);
 	}, null, context.subscriptions);
 }

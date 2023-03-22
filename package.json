@@ -1,5 +1,6 @@
 {
   "name": "notion-sync",
+  "publisher": "wangyu",
   "displayName": "notion-sync",
   "description": "",
   "version": "0.0.1",
@@ -9,7 +10,10 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": ["*"],
+  "activationEvents": [
+    "onDidSaveTextDocument",
+    "onWillSaveTextDocument"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -38,6 +42,10 @@
         "title": "Notion-Sync: Update notion block (Block ID: {{blockId}})"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangyu92/notion-syncblock"
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
