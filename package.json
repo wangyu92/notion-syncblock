@@ -1,0 +1,66 @@
+{
+  "name": "notion-sync",
+  "displayName": "notion-sync",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": ["*"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "notion-sync.reverseWord",
+        "title": "Reverse Word"
+      },
+      {
+        "command": "notion-sync.inputApiKey",
+        "title": "Notion-Sync: Set your API key"
+      },
+      {
+        "command": "notion-sync.viewApiKey",
+        "title": "Notion-Sync: Check your API key"
+      },
+      {
+        "command": "notion-sync.selectNotionPage",
+        "title": "Notion-Sync: Select notion page"
+      },
+      {
+        "command": "notion-sync.syncBlock",
+        "title": "Notion-Sync: Sync with notion block (Block ID: {{blockId}})"
+      },
+      {
+        "command": "notion-sync.updateBlock",
+        "title": "Notion-Sync: Update notion block (Block ID: {{blockId}})"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.76.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
